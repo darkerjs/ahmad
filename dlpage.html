@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>ahmad.dev</title>
     <meta charset="UTF-8">
@@ -8,8 +8,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {font-family: "Lato", sans-serif}
-        .mySlides {display: none}
+body {
+font-family: "Lato", sans-serif;
+}
+.dark-mode {
+  background-color: rgb(32, 37, 56);
+  color: rgb(226, 221, 255);
+}
+html {
+  scroll-behavior: smooth;
+}
     </style>
 	<title>Articles disponibles</title>
 </head>
@@ -31,7 +39,7 @@
           <a href="#" class="w3-bar-item w3-button">up</a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+      <a onclick="darkmode()" class="w3-padding-large w3-hover-blue-gray w3-hide-small w3-right"><i class="fa fa-moon-o"></i></a>
     </div>
   </div>
   
@@ -71,3 +79,11 @@
 	</section>
 </body>
 </html>
+
+<script>
+function darkmode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+  
+</script>
