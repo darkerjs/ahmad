@@ -20,6 +20,24 @@ html {
 }
 .mySlides {display: none}
 </style>
+<style>
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
 </head>
 <body>
 
@@ -44,7 +62,7 @@ html {
   
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Articles</a>
+    <a onclick="window.location.href='https://darkrexe.github.io/ahmad-dev/dlpage'" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Articles</a>
     <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Projects</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Social</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>

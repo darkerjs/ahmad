@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+<style>
+
 body {
 font-family: "Lato", sans-serif;
 }
@@ -15,10 +16,53 @@ font-family: "Lato", sans-serif;
   background-color: rgb(32, 37, 56);
   color: rgb(226, 221, 255);
 }
+.card {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.2s;
+  width: 20%;
+}
+.card:hover {
+  box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2);
+  cursor: pointer
+}
+.container {
+  padding: 2px 6px;
+}
+#progress {
+  width: 100%;
+  background-color: grey;
+}
+
+#bar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
 html {
   scroll-behavior: smooth;
 }
-    </style>
+</style>
+<style>
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+    <h2> <br>
+    <br>
+    </h2>
 	<title>Articles disponibles</title>
 </head>
 <body>
@@ -31,13 +75,10 @@ html {
       <a onclick="window.location.href='https://darkrexe.github.io/ahmad-dev/dlpage'" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Articles</a>
       <a onclick="darkmode()" class="w3-padding-large w3-hover-blue-gray w3-hide-small w3-right"><i class="fa fa-moon-o"></i></a>
     </div>
-  </div>
-  
+</div> 
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Articles</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Projects</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Social</a>
+  <div id="navDemo" onclick="window.location.href='https://darkrexe.github.io/ahmad-dev/index'" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a onclick="window.location.href='https://darkrexe.github.io/ahmad-dev/dlpage'" onclick="myFunction()">Articles</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"></a>
   </div>
   
@@ -48,25 +89,48 @@ html {
 		<button onclick="window.location.href='https://example.com/file2.zip'">Download File 2</button>
 	</section>
 -->
-
-	<section>
-		<h2>Al Moufid</h2>
+<div class="w3-center">  
+<h2>Available Articles:<br>
+  </h2>
+  <!--<div class="card fa-desktop">
+    <img src="./src/analyse.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Al Moufid Maths</b></h4> 
+      <p onclick= "move()" onclick="window.location.href='https://drive.google.com/u/0/uc?id=1GHjdrtYRHNl0c0tfKc8ylO2JEP7GJ0Py&export=download'">Tome 1: Analyse</p> 
+    </div>
+  </div>
+  <div class="card">
+    <img src="./src/algèbre.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>Al Moufid Maths</b></h4> 
+      <p onclick="window.location.href='https://drive.google.com/u/0/uc?id=1GHjdrtYRHNl0c0tfKc8ylO2JEP7GJ0Py&export=download'">Tome : Algèbre</p> 
+    </div>
+  </div>
+-->
+  <div class='child'>
+		<h2> </h2>
 		<p>Al Moufid 2 BAC SM</p>
 		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1GHjdrtYRHNl0c0tfKc8ylO2JEP7GJ0Py&export=download'">Analyse</button>
 		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1jKipU__FG_URS5L62J2qULbri1ofu4Xa&export=download'">Algebre</button>
-	</section>
+	</div>
 	
-	<section>
+	<div class='child'>
 		<p>Maxi Maths 2 BAC SM</p>
 		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1QnCDftB7zJfPvzO7ga3o1SrGd23sjrhT&export=download'">Tome 1</button>
 		<button type="button" disabled>Tome 2</button>
-	</section>
+	</div>
 	
-  <section>
-		<p>Maxi Physique & Chimie 2 BAC SM</p>
+  <div class='child'>
+    <p>Maxi Physique & Chimie 2 BAC SM</p>
 		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1x4nZ4VQ_ccIAwWmO9_3OWg0EYBv-VIjH&export=download'">Tome 1</button>
 		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1n4q_otOrAP5BPyqb8mLNavoqvyCsjks5&export=download'">Tome 2</button>
-	</section>
+	</div>
+
+  <div class='child'>
+    <p>Dima Dima 2 BAC SM</p>
+		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1x4nZ4VQ_ccIAwWmO9_3OWg0EYBv-VIjH&export=download'">Tome 1</button>
+		<button type="button" disabled>Tome 2</button>
+	</div>
 </body>
 </html>
 
@@ -75,5 +139,25 @@ function darkmode() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
-  
+</script>
+
+<script>
+  var i = 0;
+  function move() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("bar");
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    }
+  }
 </script>
