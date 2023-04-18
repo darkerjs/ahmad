@@ -10,20 +10,44 @@
 <style>
 
 body {
-font-family: "Lato", sans-serif;
+font-family: "coolvetica", sans-serif;
+background-image: url("./src/bgdl.jpg");
+background-position: center; /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: 1800px; /* Resize the background image to cover the entire container */
 }
 .dark-mode {
   background-color: rgb(32, 37, 56);
-  color: rgb(226, 221, 255);
+  color: rgb(32, 27, 63);
+  
+}
+
+.column {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-dark {
+  color:rgb(33, 41, 73);
+  background-color: #bbc1e2;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  width: 20%;
+  font-size: 20px;
 }
 .card {
+  color:rgb(26, 32, 59);
+  background-color: #cacaca65;
   box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
   transition: 0.2s;
   width: 20%;
+  font-size: 20px;
+  
 }
 .card:hover {
   box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2);
-  cursor: pointer
+  cursor: pointer;
 }
 .container {
   padding: 2px 6px;
@@ -32,7 +56,6 @@ font-family: "Lato", sans-serif;
   width: 100%;
   background-color: grey;
 }
-
 #bar {
   width: 1%;
   height: 30px;
@@ -43,6 +66,41 @@ html {
 }
 </style>
 <style>
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #222222;
+  text-align: center;
+  cursor: pointer;
+  width: 70%;
+}
+.button:hover {
+  background-color: #555;
+}
+
+.card:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
   ::-webkit-scrollbar {
   width: 10px;
 }
@@ -60,9 +118,6 @@ html {
   background: #555; 
 }
 </style>
-    <h2> <br>
-    <br>
-    </h2>
 	<title>Articles disponibles</title>
 </head>
 <body>
@@ -107,7 +162,7 @@ html {
     </div>
   </div>
 -->
-  <div class='child'>
+ <!-- <div class='child'>
 		<h2> </h2>
 		<p>Al Moufid 2 BAC SM</p>
 		<button onclick="window.location.href='https://drive.google.com/u/0/uc?id=1GHjdrtYRHNl0c0tfKc8ylO2JEP7GJ0Py&export=download'">Analyse</button>
@@ -131,12 +186,42 @@ html {
 		<button type="button" disabled>Analyse</button>
     <button onclick="window.location.href='https://drive.google.com/u/3/uc?id=1Ndq5qSbCMJ4nMJM7rkSBZQBQdU1pfaC1&export=download'">Algèbre"</button>
 	</div>
+-->
+
+
+  <h2 class="row">Available Articles:<br>
+  </h2>
+    <div class="column">
+    <div class="card">
+      <figure><img src="./src/analyse.jpg" alt="analyse" style="width:100%"></figure>
+      <p class="title">Al Moufid 2BAC SM<br>Analyse</p>
+      <p><button class="button">Download</button></p>
+    </div>
+    <div class="card">
+    <figure><img src="./src/algèbre.jpg" alt="Algebra" style="width:100%"></figure>
+      <p class="title">Al Moufid 2BAC SM<br>Algèbre</p>
+      <p><button class="button">Download</button></p>
+    </div>
+
+    <div class="card">
+      <figure><img src="./src/maxi1.jpg" alt="Algebra" style="width:100%"></figure>
+        <p class="title">Maxi Maths 2BAC SM<br>Tome 1</p>
+        <p><button class="button">Download</button></p>
+      </div>
+    <div class="card">
+        <figure><img src="./src/maxi2.jpg" alt="Algebra" style="width:100%"></figure>
+          <p class="title">Maxi Maths 2BAC SM<br>Tome 2</p>
+          <p><button class="button">Download</button></p>
+        </div>
+    </div>
+  </div>
 </body>
 </html>
 
 <script>
 function darkmode() {
    var element = document.body;
+   var object = document.getElementById("card")
    element.classList.toggle("dark-mode");
 }
 </script>
