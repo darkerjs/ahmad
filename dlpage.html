@@ -23,27 +23,18 @@ background-size: cover;
 }
 
 .column {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-rows: 5;
 }
 @media screen and (max-width: 600px) {
   .column {
-  display: flex;
-  justify-content: center;
+    display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 5;
   }
 }
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-@media screen and (max-width: 600px) {
-  .column {
-  display: flex;
-  justify-content: center;
-  }
-}
+
 
 .card-dark {
   color:rgb(33, 41, 73);
