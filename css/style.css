@@ -9,9 +9,10 @@
 //--//-->   STYLES GENERALES
 ======================================*/
 
-body {
+.body {
   background-color: #f5f5f5;
   color: #4e4e4e;
+  overflow-y: scroll;
 }
 
 h1,
