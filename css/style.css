@@ -15,6 +15,40 @@
   overflow-y: scroll;
 }
 
+.common {
+  text-shadow: #383838;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: x-large;
+  box-sizing: initial;
+  background-image: url("../src/bg.png");
+  box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+  text-shadow: 2px 2px 2px #000000;
+}
+.commonbig {
+  text-shadow: #000000;
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+  font-size: xx-large;
+  text-shadow: 2px 2px 2px #000000
+}
+
+
+#box1 {
+    width:200px;
+	  height:200px;
+	  margin:10px;
+	  padding:10px;
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    opacity: 0.2;
+}
+
 h1,
 h2,
 h3,
@@ -1075,6 +1109,8 @@ footer {
   color: #fff;
   padding-bottom: 4rem;
 }
+
+
 
 footer .copyright {
   margin-bottom: .3rem;
