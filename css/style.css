@@ -41,6 +41,10 @@
   text-shadow: 2px 2px 2px #00000069;
 }
 
+.image-container {
+  filter: saturate(80%); /* Decrease saturation by 30% (100% - 30% = 70%) */
+}
+
 .common {
   text-shadow: #383838;
   text-align: center;
