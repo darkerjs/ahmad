@@ -1411,12 +1411,6 @@ animation: move-wave 3s;
   animation: move_wave 15s linear infinite;
 }
 
-
-
-
-
-
-
 .column {
   display: flex;
   justify-content: space-evenly;
