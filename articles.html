@@ -30,7 +30,7 @@
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">ahmad.dev</a>
+      <a class="navbar-brand js-scroll" href="index.html">ahmad.dev</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
@@ -63,7 +63,9 @@
     <footer>
       <div class="container">
         <div class="w3-center">  
-          <h2 class="commonbig"><br><br>Available Articles:<br><br>
+          </div>
+          <h2 class="commonbig"><br><br>Available Articles:<br><br> 
+            </script>
           </h2>
           <br>
           <p class="common">2 BAC Science Maths</p>
@@ -183,6 +185,9 @@
           <p class="common">2 BAC Science Experimentales</p>
           <br>
 
+          <br><br><br>
+          <div class="visitor-counter-text">visitor-counter
+            <div id="visitor-counter">14</div>
           </div>
 
 
@@ -206,6 +211,23 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
+  <script>
+    // Function to increment the visitor counter
+    function incrementCounter() {
+      // Retrieve the current count from the element
+      var counterElement = document.getElementById('visitor-counter');
+      var count = parseInt(counterElement.textContent);
+  
+      // Increment the count
+      count++;
+  
+      // Update the element with the new count
+      counterElement.textContent = count;
+    }
+  
+    // Call the incrementCounter function when the page loads
+    window.onload = incrementCounter;
+  </script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/popper/popper.min.js"></script>
