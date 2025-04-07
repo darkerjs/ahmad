@@ -101,6 +101,19 @@
 		});
 	}
 
+	/*--/ Star Typed Perma /--*/
+	if ($('.text-slider-p')) {
+		var typed_strings = $('.text-slider-items-p').text();
+		var typed = new Typed('.text-slider-p', {
+			strings: typed_strings.split(','),
+			typeSpeed: 80,
+			loop: true,
+			backDelay: 1100,
+			backSpeed: 30
+		});
+	}
+	
+
 	/*--/ Testimonials owl /--*/
 	$('#testimonial-mf').owlCarousel({
 		margin: 20,
@@ -114,4 +127,6 @@
 		}
 	});
 
+
+	
 })(jQuery);

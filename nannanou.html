@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body style="margin-top: 120px;"></body>
+  <br>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>HAPPY BIRTHDAY BABYYYYY</strong>
+                        <p>
+                          Nour my sweet little cupcake!<br>
+                          Your laugh, a song the heavens make,<br>
+                          A sound that makes my worries break.<br>
+                          When you're with me, the world feels right,<br>
+                          You're my safe place, my peace day and night.<br>
+                          No words are enough to match what i feel,<br>
+                          your love runs deep, like ocean teal.<br>
+                          Today's the day a star was born,<br>
+                          A love that will forever be sworn.<br>
+                          Your birthday brings a gentle glow,<br>
+                          One that wraps me up, and won’t let go.<br>
+                          No art compares to a moment in your view,<br>
+                          I just look at you and say Miw.
+                          <br><br>
+                          I LOVE YOU.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+  </div>
+  
+    
+
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+
+<img src="img/PINPIC (1).png" alt="Photo" class="photo">
+<img src="img/PINPIC (2).png" alt="Photo" class="photo2">
+<img src="img/PINPIC (3).png" alt="Photo" class="photo3">
+<img src="img/PINPIC (4).png" alt="Photo" class="photo4">
+<img src="img/PINPIC (5).png" alt="Photo" class="photo5">
+<img src="img/PINPIC (6).png" alt="Photo" class="photo6">
+<div style="text-align: center; margin-top: 50px;">
+  <img src="img/pin-board.png" alt="Pin Board" >
+</div>
+
+    
+
+  <!-- JavaScript Libraries -->
+  <script>
+    document.querySelector('.envelope').addEventListener('click', function(){
+  if (document.querySelector('.letter').classList.contains('letter--open')){
+    document.querySelector('.letter').classList.remove('letter--open');
+    document.querySelector('.letter').classList.add('letter--close');
+    setTimeout(function(){
+      document.querySelector('.letter').classList.remove('letter--close');
+    }, 600);    
+  } else {
+    document.querySelector('.letter').classList.remove('letter--close');
+    document.querySelector('.letter').classList.add('letter--open');
+  } 
+});
+
+document.querySelector('.paper-close').addEventListener('click', function(){   document.querySelector('.letter').classList.remove('letter--open');
+  document.querySelector('.letter').classList.add('letter--close');
+  setTimeout(function(){
+    document.querySelector('.letter').classList.remove('letter--close');
+  }, 600);
+});
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+<style>
+    
+:root{
+  --primary: #fff;
+  --bg-color: rgb(197, 214, 216);
+  --bg-envelope-color: #f5edd1;
+  --envelope-tab: #ecdeb8;
+  --envelope-cover: #e6cfa7;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --txt-color: #444;
+  --heart-color: rgb(202, 0, 44);
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    transition: transform 0.3s ease-in;
+}
+
+.container:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease-out;
+}
+
+.container:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.5s ease-out;
+}
+.container {
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}
+.container > .envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+}
+.envelope-wrapper > .envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+.envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+.envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid var(--envelope-cover);
+  border-bottom: 100px solid var(--envelope-cover);
+  border-left: 150px solid var(--envelope-cover);
+}
+.envelope > .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 80%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 20px 10px;
+}
+
+.envelope > .letter > .text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--txt-color);
+  text-align: left;
+  font-size: 8px;
+}
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
+}
+.heart:before, 
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+.heart:before {
+  top: -7.5px;
+}
+.heart:after {
+  right: 7.5px;
+}
+.flap > .envelope:before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+.flap > .envelope > .letter {
+  bottom: 200px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+}
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
+.photo {
+      position: absolute;
+      top: 370px; /* Adjust as needed */
+      left: 650px; /* Adjust as needed */
+      width: 180px; /* Resize photo as needed */
+      rotate: -10deg; /* Rotate photo as needed */
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .photo2 {
+      position: absolute;
+      top: 350px; /* Adjust as needed */
+      left: 1320px; /* Adjust as needed */
+      width: 210px; /* Resize photo as needed */
+      rotate: -3deg; /* Rotate photo as needed */
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .photo5 {
+      position: absolute;
+      top: 650px; /* Adjust as needed */
+      left: 1000px; /* Adjust as needed */
+      width: 200px; /* Resize photo as needed */
+      rotate: -5deg; /* Rotate photo as needed */
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .photo4 {
+      position: absolute;
+      top: 650px; /* Adjust as needed */
+      left: 680px; /* Adjust as needed */
+      width: 180px; /* Resize photo as needed */
+      rotate: 15deg; /* Rotate photo as needed */
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .photo3 {
+      position: absolute;
+      top: 320px; /* Adjust as needed */
+      left: 970px; /* Adjust as needed */
+      width: 210px; /* Resize photo as needed */
+      rotate: 3deg; /* Rotate photo as needed */
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .photo6 {
+      position: absolute;
+      top: 680px; /* Adjust as needed */
+      left: 1350px; /* Adjust as needed */
+      width: 180px; /* Resize photo as needed */
+      rotate: 7deg; /* Rotate photo as needed */
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+</style>
+</body>
+</html>
